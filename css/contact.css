@@ -1,0 +1,110 @@
+
+
+@media screen and (min-width:0px) and ( max-width:712px)  {
+
+
+
+  .ct{
+    letter-spacing: 1px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    margin-top: 150px;
+    position: relative;
+    flex-direction:column;
+    width: 90%;
+    font-size: 5px;
+    justify-content: center;
+    text-align: center;
+    line-height: 13px;
+    font-weight: 600;
+    /* background: blue; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .ct p{
+    font-size: 3vw;    
+    padding-bottom: 1vw;
+    line-height: 20px;
+  }
+  
+
+  .ct #t{
+    font-size: 5vw;    
+    padding-bottom: 20px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    /* background: red; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
+}
+
+@media screen and (min-width:712px)  {
+  /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+ 
+  
+  
+  .ct{
+    display: flex;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    padding-top: 150px;
+    line-height: 40px;
+    /* height: 100vh; */
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+  }
+
+  .ct1{
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 10px;
+    top: 105%;
+    font-weight: 600;
+    left: 50%;
+    width: 90vw;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+  }
+
+  .ct2{
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 10px;
+    top: 250%;
+    font-weight: 600;
+    left: 50%;
+    width: 90vw;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+
+  .ct #t{
+    font-size: 25px;    
+    padding-bottom: 15px;
+  }
+  
+ 
+}
+
+@media screen and (min-width:1024px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
+
+}

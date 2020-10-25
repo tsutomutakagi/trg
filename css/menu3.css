@@ -1,0 +1,892 @@
+*{
+  margin: 0;
+}
+canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.main_img {
+  z-index:-1;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: anime 36s 0s infinite;
+  animation: anime 36s 0s infinite; 
+}
+
+  .main_img:nth-of-type(2) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s; }
+
+  .main_img:nth-of-type(3) {
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s; }
+
+  .main_img:nth-of-type(4) {
+    -webkit-animation-delay: 18s;
+    animation-delay: 18s; }
+
+  .main_img:nth-of-type(5) {
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s; }
+
+  .main_img:nth-of-type(6) {
+    -webkit-animation-delay: 30s;
+    animation-delay: 30s; }
+
+
+
+    @keyframes anime {
+      0% {
+            opacity: 0;
+        }
+        8% {
+            opacity: 1;
+        }
+        17% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0;
+            transform: scale(1) ;
+             z-index:-1;
+        }
+        100% { opacity: 0 }
+    }
+
+
+
+/* =================== */
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.overlay #close {
+  position: relative;
+  bottom: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sp-menu #open {
+  font-size: 32px;
+  /* line-height: 64px; */
+  cursor: pointer;
+  top: 16px;
+  left: 16px;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+
+
+.sp-menu {
+  margin-left: auto;
+}
+
+
+
+
+/* 背景 */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+  border-bottom: 1px  solid gray; /* 下端に「灰色1pxの破線」を引く */
+  width: 200px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: .3s;
+}
+
+/* =================== */
+
+
+
+.overlay2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.overlay2.show {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.overlay2 #close {
+  position: relative;
+  bottom: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sp-menu2 #open2 {
+  position: absolute;
+  font-size: 16px;
+  font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  justify-content: center;
+  text-align: center;
+  left: 50%;
+  top: 140%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  letter-spacing: 20px;
+  width: 400px;
+  height: 60px;
+  cursor: pointer;
+  border:2px solid wheat;
+  background: white;
+}
+
+.sp-menu2 #open2.hide2 {
+  display: none;
+}
+
+
+
+.sp-menu2 {
+  margin-left: auto;
+}
+
+
+
+
+/* 背景 */
+.overlay2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  padding-top: 0;
+}
+
+.overlay2.show2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay2 #close2 {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.overlay2 li {
+  margin-top: 24px;
+  font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+  width: 200px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.overlay2.show2 li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay2.show2 li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay2.show2 li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay2.show2 li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+
+
+/* ========================================= */
+
+
+
+
+
+
+/* ========================================= */
+
+
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+@media screen and (min-width:0px) and ( max-width:712px)  {
+
+  #minilogo img{
+    width: 80px;
+  }
+
+  #miniumi{
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  }
+
+  .box {
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+  
+    position: relative;
+      z-index: 0;
+      overflow: hidden;
+      height: 100vh;
+      /* opacity: 0;
+      transition-duration: 1.5s;
+      transition-property: opacity ; */
+  }
+  
+  .logo{
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 150px;
+      z-index: 0;
+  }
+  
+  .logo2{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 200px;
+  }
+  
+  .logo3{
+      position: fixed;
+      top:20px;
+      left: 30px;
+      width: 75px;
+      display: none;
+  }
+  
+  .logo-umi{
+      position: fixed;
+      top:0px;
+      right: 20px;
+      width: 100px;
+      background: wheat;
+      z-index: 10;
+  }
+  
+  .logo5{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 500px;
+    z-index: 0;
+    opacity: 0;
+  }
+
+
+    /* ============================= */
+
+  .aisatsu{
+    /* letter-spacing: 1px; */
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    padding-top: 100px;
+    line-height: 10px;
+    flex-direction:column;
+    position: absolute;
+    /* height: 100vh; */
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 90%;
+    background: pink;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vw;
+  }
+  
+  .aisatsu1{
+    font-size: 6vw;
+    /* padding-left: 30vw;
+    padding-right: 30vw; */
+    padding-bottom: 20px;
+    letter-spacing: 4vh;
+    line-height: 8vw;
+    writing-mode: vertical-rl;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .aisatsu2{
+    writing-mode: vertical-rl;
+    font-size:3vw;
+    font-weight: 900;
+    line-height: 5vw;
+    letter-spacing: 1.5vw;
+    /* left: 50%; */
+    margin: auto;
+    color: black;
+    background: blue;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ============================= */
+
+  /* .aisatsu3{
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-size: 1vw;
+    padding-left: 30vw;
+    padding-right: 30vw;
+    padding-bottom: 20px;
+    letter-spacing: 4vh;
+    line-height: 9vw;
+    writing-mode: vertical-rl;
+    margin: auto;
+  } */
+
+  .menu3 {
+    writing-mode: vertical-rl;
+    flex-flow: row-reverse;
+  }
+
+  .menu3 p{
+    writing-mode: vertical-rl;
+  }
+
+    /* ============================= */
+
+
+  .cosemenu{
+    font-size:2.5vw;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    left: 50%;
+    margin: auto;
+    color: black;
+    line-height: 7vw;
+    letter-spacing: 1vw;
+  }
+
+  .cose1{
+    font-size:1vw;
+    /* left: 50%;
+    right: 50%; */
+    margin: auto;
+    color: black;
+    line-height: 5vw;
+    letter-spacing: 1vw;
+    width: 80vw;
+    position: relative;
+    text-align: center;
+    top: 100px;
+  }
+
+  .cosesetsumei{
+    font-size: 2vw;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    left: 50%;
+    margin: auto;
+    color: black;
+    line-height: 7vw;
+    letter-spacing: 1vw;
+  }
+
+  .cosesetsumei1{
+    font-size: 2vw;
+    font-weight: 900;
+    writing-mode: vertical-rl;
+    left: 50%;
+    margin: auto;
+    color: black;
+    line-height: 7vw;
+    letter-spacing: 1vw;
+  }
+
+    
+  .aisatsufont{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  
+  
+  .a {
+    /* padding-left: 20px; */
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  
+  .tate{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  
+  .title{
+    font-size: 50px;
+    padding-left: 50px;
+    letter-spacing: 30px;
+  }
+  
+
+
+  .charge{
+    position: relative;
+    font-size: 5px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 13px;
+    padding-top: 10px;
+    /* top: 105%; */
+    font-weight: 600;
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin-bottom: 0;
+    top: 5vh;
+  }
+
+
+
+
+
+
+  .sp-menu2 #open2{
+    position: relative;
+    font-size: 13px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 13px;
+    left: 50%;
+    top: 13vh;
+    /* top: 140%; */
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border:2px solid wheat;
+    margin:0 0 40px 0;
+    background: white;
+
+  }
+
+
+  .charge #t{
+    font-size: 20px;    
+    padding-bottom: 15px;
+  }
+  
+  
+  #ryokin{
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: brown;
+    
+  }
+  
+  .mame{
+    font-size: 40px;
+  }
+
+  footer{
+    height: 40vw;
+  }
+
+}
+
+@media screen and (min-width:712px)  {
+  /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+  #ppp{
+    display: flex;
+    right: auto;
+    left: auto;
+    left: 50%;
+    top: 30%;
+    position: absolute;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    height: 100%;
+  }
+
+  #qqq{
+    top: 50%;
+    padding-right: 50px;
+    z-index: 1;
+  }
+
+  #minilogo img{
+    text-align: center;
+    width: 150px;
+    z-index: 1;
+  }
+
+  #miniumi{
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+
+  .open2 {
+    width: 100vw;
+    height: 300px;
+    object-fit: cover;
+  
+    position: relative;
+      z-index: 0;
+      overflow: hidden;
+      height: 100vh;
+      /* opacity: 0;
+      transition-duration: 1.5s;
+      transition-property: opacity ; */
+  }
+  
+  .logo{
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 150px;
+  }
+  
+  .logo2{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 200px;
+  }
+  
+  .logo3{
+      position: fixed;
+      bottom:30px;
+      left: 50px;
+      width: 100px;
+      display: none;
+  }
+  
+  .logo-umi{
+      position: fixed;
+      top:0px;
+      right: 20px;
+      width: 100px;
+      background: wheat;
+  }
+  
+  .logo5{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 500px;
+    z-index: 0;
+    opacity: 0;
+  }
+  
+  
+  .aisatsu{
+    display: flex;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    padding-top: 150px;
+    line-height: 40px;
+    /* height: 100vh; */
+    flex-direction: row-reverse;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+  }
+
+  .aisatsufont{
+    padding-left: 20px;
+    height: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+  
+  .a {
+    padding-left: 20px;
+    height: 400px;
+  }
+  
+  .tate{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .title{
+    font-size: 50px;
+    padding-left: 50px;
+    letter-spacing: 30px;
+  }
+
+  .aisatsu1{
+    font-size: 50px;
+    padding-left: 30px;
+    letter-spacing: 30px;
+    writing-mode: vertical-rl;
+    padding-right: 30px;
+    /* letter-spacing: 4vh; */
+    line-height: 60px;
+  }
+
+
+    .tate{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+
+  .aisatsu2{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    font-weight: 700;
+  }
+  
+  .cosemenu{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    font-weight: 700;
+  }
+
+  .cosesetsumei{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    font-weight: 700;
+  }
+
+  .cosesetsumei1{
+    writing-mode: vertical-rl;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 50%;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  .charge{
+    position: absolute;
+    font-size: 10px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 10px;
+    top: 105%;
+    font-weight: 600;
+    left: 50%;
+    width: 90vw;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+  }
+
+  #btn{
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    top: 140%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    letter-spacing: 20px;
+    width: 400px;
+    height: 60px;
+    cursor: pointer;
+    border:2px solid wheat;
+    background: white;
+  }
+
+  .charge #t{
+    font-size: 20px;    
+    padding-bottom: 10px;
+  }
+  
+ 
+  
+  #ryokin{
+    position: relative;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: brown;
+  }
+  
+  .mame{
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (min-width:1024px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
+
+}
+
+
+.b{
+  font-size:2vw;
+  font-weight: 900;
+  padding-left: 30px;
+  writing-mode: vertical-rl;
+  left: 50%;
+  margin: auto;
+  color: black;
+  line-height: 3vw;
+  letter-spacing: 1vw;
+}
+
+

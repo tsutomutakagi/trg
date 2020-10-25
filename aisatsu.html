@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oshokuzi UMI</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animation.css">
+
+  <style>
+    body {
+    background-image: url('img/japanese-paper_00478.jpg');
+         }
+  </style>
+</head>
+
+<body>
+
+  <!-- <header>
+    <div class="sp-menu">
+      <span class="material-icons" id="open">menu</span>
+    </div>
+  </header> -->
+
+  <div class="sp-menu">
+    <span class="material-icons" id="open" style="position: fixed; z-index: 1;">menu</span>
+  </div>
+
+  <div>
+    <img class="logo-umi"  src="img/うみ2.png" >
+  </div>
+  
+
+<div class="overlay">
+    <span class="material-icons" id="close" >close</span>
+  <div id="ppp">
+  <div id="qqq">
+    <div id="minilogo"><img src="img/1.png"></div>
+  </div>
+  
+  <div>
+    <div id="miniumi">御食事 | うみ</div>
+    <nav>
+      <ul>
+        <li><a href="index.html"> ホーム</a></li>
+        <li><a href="aisatsu.html">ご挨拶</a></li>
+        <li><a href="cose1-1.html">３組限定ディナー</a></li>
+        <li><a href="contact.html">ご予約</a></li>
+        <li><a href="kuromame.html">丹波黒豆エスプレッソ煮</a></li>
+      </ul>
+    </nav>
+    </div>
+  </div>
+</div>
+  
+<mian>
+  <div>
+      <div class="aisatsu">
+        <div class="aisatsu1 fade">ご挨拶</div>
+        <div class="aisatsu2 fade2">
+          和とイタリアンを融合させた</p>
+          <p>「イタリアン割烹　海」</p>
+          <p>神戸元町駅から徒歩５分、</p>
+          <p>タワーマンションの１階に</p>
+          <p>２０１３年オープン。</p>
+          <p>イタリアンをベースに料理のジャンル、</p>
+          <p>枠に囚われず、</p>
+          <p>イタリア料理と日本料理を融合した</p>
+          <p>割烹スタイルのイノヴェーティブイタリアン</p>
+          <p>国内外、本場イタリアミシュラン店で</p>
+          <p>修行を積んだオーナーシェフ白石涼海の</p>
+          <p>料理観、世界をお楽しみください。</p>
+        </div>
+        </div>
+   </div>
+
+  </mian>
+
+</body>
+
+      <script src="js/main.js"></script>
+
+      <div>
+        <canvas></canvas>
+      </div>
+      
+      <!-- Copyright (c) masuwa (@ma_suwa) 
+      Released under the MIT license
+      http://opensource.org/licenses/mit-license.php -->
+      
+      <script>
+        (function(){
+      
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      
+      var canvas = document.querySelector("canvas");
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight;
+      var ctx = canvas.getContext("2d");
+      ctx.globalCompositeOperation = "source-over";
+      var particles = [];
+      var pIndex = 0;
+      var x, y, frameId;
+      
+      function Dot(x,y,vx,vy,color){
+        this.x = x;
+        this.y = y;
+        this.vx = vx;
+        this.vy = vy;
+        this.color = color;
+        particles[pIndex] = this;
+        this.id = pIndex;
+        pIndex++;
+        this.life = 0;
+        this.maxlife = 600;
+        this.degree = getRandom(0,360);//開始角度をずらす
+        this.size = Math.floor(getRandom(8,10));//紙吹雪のサイズに変化をつける
+      };
+      
+      Dot.prototype.draw = function(x, y){
+      
+        this.degree += 1;
+        this.vx *= 0.99;//重力
+        this.vy *= 0.999;//重力
+        this.x += this.vx+Math.cos(this.degree*Math.PI/180);//蛇行
+        this.y += this.vy;
+        this.width = this.size;
+        this.height = Math.cos(this.degree*Math.PI/45)*this.size;//高さを変化させて、回転させてるっぽくみせる
+        //紙吹雪の描写
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.moveTo(this.x+this.x/2, this.y+this.y/2);
+        ctx.lineTo(this.x+this.x/2+this.width/2, this.y+this.y/2+this.height);
+        ctx.lineTo(this.x+this.x/2+this.width+this.width/2, this.y+this.y/2+this.height);
+        ctx.lineTo(this.x+this.x/2+this.width, this.y+this.y/2);
+        ctx.closePath();
+        ctx.fill();
+        this.life++;
+        //lifeがなくなったら紙吹雪を削除
+        if(this.life >= this.maxlife){
+          delete particles[this.id];
+        }
+      }
+      //リサイズ処理
+      window.addEventListener("resize", function(){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        x = canvas.width / 2;
+        y = canvas.height / 2;
+      });
+      
+      function loop(){
+        //全画面に色をしく。透過率をあげると残像が強くなる
+        ctx.clearRect(0,0, canvas.width, canvas.height);
+        //紙吹雪の量の調節
+        if(frameId % 10 == 0) {
+            new Dot(canvas.width*Math.random()-canvas.width+canvas.width/2*Math.random(), -canvas.height/2, getRandom(1, 3),  getRandom(2, 4),"#f5f5f5");
+            new Dot(canvas.width*Math.random()+canvas.width-canvas.width*Math.random(), -canvas.height/2,  -1 * getRandom(1, 3),  getRandom(2, 4),"#FFF");
+        }
+        for(var i in particles){
+          particles[i].draw();
+        }
+        frameId = requestAnimationFrame(loop);
+      }
+      
+      loop();
+      
+      function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      
+      })();
+      </script>
+</body>

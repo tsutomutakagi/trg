@@ -1,0 +1,61 @@
+
+.fade{
+
+  animation: fadeIn 2s ease 0s 1 normal;
+
+}
+
+
+.fade2{
+
+  animation: fadeIn 3s ease 0s 1 normal;
+
+}
+
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+  0% {opacity: 0.5} /*アニメーション開始時は不透明度0%*/
+
+  30% {opacity: 0.5} /*アニメーション開始時は不透明度0%*/
+
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+}
+
+
+
+
+.fade3{
+
+  animation: fadeOut 5s ease 0s 1 normal;
+
+}
+
+@keyframes fadeOut { /*animetion-nameで設定した値を書く*/
+
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  30% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  70% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+  100% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+
+}
+
+.fade4{
+
+  animation: fadeIn 10s ease 0s 1 normal;
+
+}
+
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  50% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+}

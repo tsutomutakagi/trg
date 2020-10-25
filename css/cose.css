@@ -1,0 +1,117 @@
+#topimg{
+  /* height: 100vw; */
+  width: 98%;
+  margin: 1%;
+}
+
+#top{
+  text-align: center;
+  /* padding-bottom: 30px; */
+  /* margin-bottom: 10px; */
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#aisatsu{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 30px;
+  margin-bottom: 70px;
+}
+
+#coseimg{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+#coseimg img{
+  width: 30%;
+  margin: auto;
+}
+
+#cosemenu{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 30px;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+#cosebtn{
+  position: relative;
+  font-size: 13px;
+  font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  text-align: center;
+  top: 8vh;
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  letter-spacing: 10px;
+  border:2px solid wheat;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+#coseyoyaku{
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  margin-bottom: 0;
+  margin-bottom: 150px;
+}
+
+.cosecharge{
+  position: relative;
+  font-size: 5px;
+  font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  justify-content: center;
+  text-align: center;
+  line-height: 13px;
+  padding-top: 10px;
+  /* top: 105%; */
+  font-weight: 600;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  margin-bottom: 30px;
+  top: 5vh;
+}
+
+.cosecharge #t{
+  margin-bottom: 20px; 
+  margin-top: 20px; 
+  border-bottom: solid 1px black; 
+  padding: 30px; 
+  margin-bottom: 20px; 
+  font-size: 20px;    
+  padding-bottom: 20px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body{
+  margin-bottom: 150px;
+}
