@@ -316,7 +316,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-/*     width: 90%; */
+    width: 90%;
     /* background: pink; */
     margin-left: auto;
     margin-right: auto;
@@ -324,8 +324,8 @@ a{
   
   .aisatsu1{
     font-size: 6vw;
-    /* padding-left: 30vw;
-    padding-right: 30vw; */
+    padding-left: 30vw;
+    padding-right: 30vw;
     padding-bottom: 20px;
     letter-spacing: 4vh;
     line-height: 8vw;
