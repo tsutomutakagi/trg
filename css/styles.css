@@ -320,7 +320,7 @@ a{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     width: 90%;
-    background: pink;
+/*     background: pink; */
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 100px;
