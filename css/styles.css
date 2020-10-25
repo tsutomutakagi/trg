@@ -323,29 +323,9 @@ a{
     background: pink;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10vw;
-    padding-bottome
+    padding-bottom: 100px;
   }
   
-.aisatsu{
-    /* letter-spacing: 1px; */
-    font-family: 'Noto Serif JP', "游明朝", YuMincho, "ヒラギノ明朝 Pr6 W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
-    justify-content: center;
-    padding-top: 100px;
-    line-height: 10px;
-    flex-direction:column;
-    position: absolute;
-    /* height: 100vh; */
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    width: 90%;
-    /* background: pink; */
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 100px;
-    
-  }
   
   .aisatsu1{
     font-size: 6vw;
