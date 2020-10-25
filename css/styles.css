@@ -320,21 +320,21 @@ a{
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     width: 90%;
-    /* background: pink; */
+    background: pink;
     margin-left: auto;
     margin-right: auto;
-    
+    margin-bottom: 10vw;
   }
   
   .aisatsu1{
     font-size: 6vw;
-    padding-left: 30vw;
-    padding-right: 30vw;
+    /* padding-left: 30vw;
+    padding-right: 30vw; */
     padding-bottom: 20px;
     letter-spacing: 4vh;
     line-height: 8vw;
     writing-mode: vertical-rl;
-    /* background: red; */
+    background: red;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -347,10 +347,9 @@ a{
     line-height: 5vw;
     letter-spacing: 1.5vw;
     /* left: 50%; */
-    width: auto;
     margin: auto;
     color: black;
-    /* background: blue; */
+    background: blue;
     margin-left: auto;
     margin-right: auto;
   }
