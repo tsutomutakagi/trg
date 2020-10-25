@@ -316,7 +316,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    width: 90%;
+/*     width: 90%; */
     /* background: pink; */
     margin-left: auto;
     margin-right: auto;
